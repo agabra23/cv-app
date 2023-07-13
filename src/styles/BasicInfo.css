@@ -1,0 +1,19 @@
+#basicInfoForm {
+  margin: auto;
+  margin-top: 1rem;
+  width: 50svw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.basic-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  margin: auto;
+  color: red;
+}
