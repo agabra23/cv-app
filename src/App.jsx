@@ -1,17 +1,7 @@
-import BasicInfo from "./components/sections/BasicInfo";
-import Skills from "./components/sections/Skills";
-import Education from "./components/sections/Education";
-import Work from "./components/sections/Work";
+import CVForm from "./components/sections/CVForm";
 
 function App() {
-  return (
-    <div className="App">
-      <BasicInfo />
-      <Skills />
-      <Education />
-      <Work />
-    </div>
-  );
+  return <CVForm />;
 }
 
 export default App;
