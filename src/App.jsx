@@ -16,10 +16,16 @@ class App extends Component {
         linkedInURL: "(Your LinkedIn)",
       },
     };
+
+    this.updateClickHandler = this.updateClickHandler.bind(this);
+  }
+
+  updateClickHandler() {
+    console.log(this.state);
   }
 
   render() {
-    return <CVForm />;
+    return <CVForm updateClickHandler={this.updateClickHandler} />;
   }
 }
 

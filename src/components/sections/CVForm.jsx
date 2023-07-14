@@ -3,6 +3,7 @@ import BasicInfo from "./BasicInfo";
 import Skills from "./Skills";
 import Education from "./Education";
 import Work from "./Work";
+import UpdateButton from "../utils/UpdateButton";
 
 export default class CVForm extends Component {
   constructor(props) {
@@ -10,13 +11,16 @@ export default class CVForm extends Component {
   }
 
   render() {
+    const updateClickHandler = this.props.updateClickHandler;
+
     return (
       <div className="CVForm">
         <BasicInfo />
         <Skills />
         <Education />
         <Work />
-        <button id="updateInfo"></button>
+
+        <UpdateButton updateClickHandler={updateClickHandler} />
       </div>
     );
   }
