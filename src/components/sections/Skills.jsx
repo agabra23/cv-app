@@ -1,5 +1,6 @@
 import { Component } from "react";
 import SkillOverview from "./SkillOverview";
+import "../../styles/Skills.css";
 
 export default class Skills extends Component {
   constructor(props) {
@@ -27,15 +28,17 @@ export default class Skills extends Component {
 
     return (
       <div id="skillsSection">
-        <input
-          type="text"
-          placeholder="Add Skill"
-          value={currentValue}
-          onChange={this.handleSkillChange}
-        />
-        <button type="button" onClick={this.updateSkillsList}>
-          Add Skill
-        </button>
+        <div className="skill-input">
+          <input
+            type="text"
+            placeholder="Add Skill"
+            value={currentValue}
+            onChange={this.handleSkillChange}
+          />
+          <button type="button" onClick={this.updateSkillsList}>
+            Add Skill
+          </button>
+        </div>
         <SkillOverview skillList={skillList} deleteHandle={deleteHandle} />
       </div>
     );

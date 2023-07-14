@@ -1,0 +1,11 @@
+#skillsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skill-list > ul > div {
+  display: flex;
+  gap: 1rem;
+}
