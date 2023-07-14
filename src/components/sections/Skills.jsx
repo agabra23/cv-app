@@ -18,13 +18,12 @@ export default class Skills extends Component {
     this.props.handleSkillClick(this.state.currentValue);
 
     this.setState({ currentValue: "" });
-
-    
   };
 
   render() {
     const { currentValue } = this.state;
     const skillList = this.props.skillList;
+    const deleteHandle = this.props.deleteHandle;
 
     return (
       <div id="skillsSection">
@@ -37,7 +36,7 @@ export default class Skills extends Component {
         <button type="button" onClick={this.updateSkillsList}>
           Add Skill
         </button>
-        <SkillOverview skillList={skillList} />
+        <SkillOverview skillList={skillList} deleteHandle={deleteHandle} />
       </div>
     );
   }

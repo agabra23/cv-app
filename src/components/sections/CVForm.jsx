@@ -16,12 +16,17 @@ export default class CVForm extends Component {
       updateClickHandler,
       skillList,
       handleSkillClick,
+      deleteHandle,
     } = this.props;
 
     return (
       <div className="CVForm">
         <BasicInfo handleInputChange={handleInputChange} />
-        <Skills skillList={skillList} handleSkillClick={handleSkillClick} />
+        <Skills
+          skillList={skillList}
+          handleSkillClick={handleSkillClick}
+          deleteHandle={deleteHandle}
+        />
         <Education />
         <Work />
 

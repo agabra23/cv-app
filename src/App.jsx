@@ -45,6 +45,16 @@ class App extends Component {
     );
   };
 
+  deleteItem = (index) => {
+    const tempList = this.state.skillList;
+
+    tempList.splice(index, 1);
+
+    this.setState({ skillList: tempList }, () => {
+      console.log(this.state.skillList);
+    });
+  };
+
   render() {
     return (
       <CVForm
@@ -52,6 +62,7 @@ class App extends Component {
         updateClickHandler={this.updateClickHandler}
         skillList={this.state.skillList}
         handleSkillClick={this.handleSkillClick}
+        deleteHandle={this.deleteItem}
       />
     );
   }
