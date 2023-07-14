@@ -14,6 +14,7 @@ class App extends Component {
         homeState: "(State)",
         personalSiteURL: "(Your Website)",
         linkedInURL: "(Your LinkedIn)",
+        githubURL: "(Your GitHub URL)",
       },
       skillList: [],
     };

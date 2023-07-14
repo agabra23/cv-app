@@ -46,6 +46,11 @@ export default class BasicInfo extends Component {
             handleInputChange={handleInputChange}
           />
           <TextInput
+            name="githubURL"
+            title="GitHub URL"
+            handleInputChange={handleInputChange}
+          />
+          <TextInput
             name="linkedInURL"
             title="LinkedIn URL"
             handleInputChange={handleInputChange}
