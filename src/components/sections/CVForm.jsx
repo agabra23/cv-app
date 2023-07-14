@@ -11,11 +11,12 @@ export default class CVForm extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="CVForm">
         <BasicInfo />
         <Skills />
         <Education />
         <Work />
+        <button id="updateInfo"></button>
       </div>
     );
   }

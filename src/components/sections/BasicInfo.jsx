@@ -9,6 +9,8 @@ export default class BasicInfo extends Component {
   }
 
   render() {
+    const { personalInfo } = this.props.personalInfo;
+
     return (
       <div className="basic-info">
         <h3 className="section-title">Basic Info</h3>
