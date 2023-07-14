@@ -7,7 +7,6 @@ export default class Skills extends Component {
 
     this.state = {
       currentValue: "",
-      skillList: [],
     };
   }
 
@@ -15,15 +14,17 @@ export default class Skills extends Component {
     this.setState({ currentValue: e.target.value });
   };
 
-  handleSkillClick = () => {
-    this.setState((prevState) => {
-      return { skillList: [...prevState.skillList, prevState.currentValue] };
-    });
+  updateSkillsList = () => {
+    this.props.handleSkillClick(this.state.currentValue);
+
     this.setState({ currentValue: "" });
+
+    
   };
 
   render() {
-    const { currentValue, skillList } = this.state;
+    const { currentValue } = this.state;
+    const skillList = this.props.skillList;
 
     return (
       <div id="skillsSection">
@@ -33,7 +34,7 @@ export default class Skills extends Component {
           value={currentValue}
           onChange={this.handleSkillChange}
         />
-        <button type="button" onClick={this.handleSkillClick}>
+        <button type="button" onClick={this.updateSkillsList}>
           Add Skill
         </button>
         <SkillOverview skillList={skillList} />

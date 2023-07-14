@@ -15,6 +15,7 @@ class App extends Component {
         personalSiteURL: "(Your Website)",
         linkedInURL: "(Your LinkedIn)",
       },
+      skillList: [],
     };
 
     this.updateClickHandler = this.updateClickHandler.bind(this);
@@ -33,11 +34,24 @@ class App extends Component {
     }));
   };
 
+  handleSkillClick = (value) => {
+    this.setState(
+      (prevState) => {
+        return { skillList: [...prevState.skillList, value] };
+      },
+      () => {
+        console.log(this.state.skillList);
+      }
+    );
+  };
+
   render() {
     return (
       <CVForm
         handleInputChange={this.handleInputChange}
         updateClickHandler={this.updateClickHandler}
+        skillList={this.state.skillList}
+        handleSkillClick={this.handleSkillClick}
       />
     );
   }
