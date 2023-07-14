@@ -6,8 +6,15 @@ export default class TextInput extends Component {
   }
 
   render() {
-    const { title } = this.props;
+    const { name, title, handleInputChange } = this.props;
 
-    return <input type="text" placeholder={title} />;
+    return (
+      <input
+        type="text"
+        name={name}
+        placeholder={title}
+        onChange={handleInputChange}
+      />
+    );
   }
 }

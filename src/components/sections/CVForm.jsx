@@ -11,11 +11,11 @@ export default class CVForm extends Component {
   }
 
   render() {
-    const updateClickHandler = this.props.updateClickHandler;
+    const { handleInputChange, updateClickHandler } = this.props;
 
     return (
       <div className="CVForm">
-        <BasicInfo />
+        <BasicInfo handleInputChange={handleInputChange} />
         <Skills />
         <Education />
         <Work />

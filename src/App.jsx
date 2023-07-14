@@ -24,8 +24,22 @@ class App extends Component {
     console.log(this.state);
   }
 
+  handleInputChange = (e) => {
+    this.setState((prevState) => ({
+      personalInfo: {
+        ...prevState.personalInfo,
+        [e.target.name]: e.target.value,
+      },
+    }));
+  };
+
   render() {
-    return <CVForm updateClickHandler={this.updateClickHandler} />;
+    return (
+      <CVForm
+        handleInputChange={this.handleInputChange}
+        updateClickHandler={this.updateClickHandler}
+      />
+    );
   }
 }
 
